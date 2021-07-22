@@ -1,0 +1,10 @@
+.bgimage {
+   background-image: url('../images/panoramica1.jpg');
+   background-size: cover;
+   background-position: center;
+   height: 350px;
+}
+
+.tooltip-inner {
+   max-width: 250px;
+}
