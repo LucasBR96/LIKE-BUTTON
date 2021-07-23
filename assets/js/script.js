@@ -69,27 +69,78 @@ function getAmnt( nome ){
 
 function setAmnt( old_status , new_status , id ){
 
+   // -----------------------------------------------------
+   // muda a quantidade de likes e dislikes de um passeio 
+   // com base na escolha de um cliente
+   // -----------------------------------------------------
+
    let val = getAmnt( id );
    let pos;
 
-   console.log( old_status );
+   //console.log( old_status );
    if( old_status[0] || old_status[1] ){
       pos = old_status.indexOf( true );
       val[ pos ]--;
    }
 
-   console.log( new_status );
+   //console.log( new_status );
    if( new_status[0] || new_status[1] ){
       pos = new_status.indexOf( true );
       val[ pos ]++;
    }
 }
 
+function pushAmntToCard( par ){
+
+   // -----------------------------------------------------
+   // sincroniza a quantidade de likes e dislikes de um 
+   // passeio com o que é mostrado pelo arquivo http
+   // -----------------------------------------------------
+
+   let id = par.id;
+   let children = par.children;
+   let amnt;
+
+   for( i = 0; i < 2 ; i++ ){
+      amnt = getAmnt( id )[ i ];
+      //console.log( amnt );
+      children[ i ].firstChild.data = amnt.toString();
+   }
+}
+
+function logClickEvent( likeButton , nomePasseio ){
+
+   let s1 = "O card escolhido foi " + nomePasseio;
+   
+   let escolha = "Dislike";
+   if( likeButton ){ 
+      escolha = "Like"; 
+   }
+   let s2 = "O usuário clicou em " + escolha;
+
+   let a = getId( nomePasseio )[ 0 ]; 
+   let b = getId( nomePasseio )[ 1 ];
+   let s3 = "neutra";
+   if ( a && ( !b ) ){
+      s3 = "positiva";
+   }else if( ( !a ) && b ){
+      s3 = "negativa";
+   }
+   s3 = "A opinião do usuário agora é " + s3;
+
+   a = getAmnt( nomePasseio )[ 0 ].toString(); 
+   b = getAmnt( nomePasseio )[ 1 ].toString();
+   s4 = "Esse passeio agora tem " + a + " Likes e " + b + " Dislikes";
+
+   console.log( [ s1 , s2 , s3 , s4 ].join( "\n" ) , "\n" );
+} 
+
 function setLike( num , x ){
    
    // -----------------------------------------------------
    // muda o preenchimento do botão like e dislike com base
-   // no que o cliente apertou
+   // no que o cliente apertou, além de alterar a quantidade
+   // de likes e dislikes de cada passeio.
    // -----------------------------------------------------
 
    let par = x.parentElement;
@@ -103,7 +154,10 @@ function setLike( num , x ){
 
    setAmnt( oldStatus , newStatus , par.id );
    let numLikes = getAmnt( par.id );
-   console.log( bool_val , par.id , newStatus, numLikes );
+   pushAmntToCard( par );
+
+   
+   logClickEvent( bool_val , par.id );
 
 }
 
