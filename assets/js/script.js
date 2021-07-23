@@ -37,6 +37,24 @@ function manageLike( src , nome ){
    vals[ 1 ] = ( ( !src) && ( !x2 ));
 }
 
+function setColors( par ){
+
+   let val = likeDict[ par.id ];
+   let child, tag, old;
+   for( let i = 0 ; i < 2 ; i++ ){
+
+      child = par.children[ i ];
+      tag = "far";
+      old = "fa";
+      if ( val[ i ] ){
+         tag = "fa";
+         old = "far";
+      }
+      child.classList.remove( old );
+      child.classList.add( tag );
+   }
+}
+
 var likeAmnt = {};
 function getAmnt( nome ){
 
@@ -51,16 +69,18 @@ function getAmnt( nome ){
 
 function setAmnt( old_status , new_status , id ){
 
-   let val = getAmnt[ id ];
+   let val = getAmnt( id );
    let pos;
 
-   if( old_status.sum() ){
-      pos = old_status.indexOf( 1 );
+   console.log( old_status );
+   if( old_status[0] || old_status[1] ){
+      pos = old_status.indexOf( true );
       val[ pos ]--;
    }
 
-   if( new_status.sum() ){
-      pos = new_status.indexOf( 1 );
+   console.log( new_status );
+   if( new_status[0] || new_status[1] ){
+      pos = new_status.indexOf( true );
       val[ pos ]++;
    }
 }
@@ -72,28 +92,23 @@ function setLike( num , x ){
    // no que o cliente apertou
    // -----------------------------------------------------
 
-   let nome = x.parentElement.id;
+   let par = x.parentElement;
    let bool_val = ( num == 1 );
-   let old_status , new_status;
-   
-   old_status = getId( nome )
-   manageLike( bool_val , nome );
-   let val = likeDict[ nome ];
-   //console.log( bool_val , nome , val );
+   let oldStatus, newStatus;
 
-   let child, tag, old;
-   for( let i = 0 ; i < 2 ; i++ ){
+   oldStatus = getId( par.id ).map( x => x )
+   manageLike( bool_val , par.id );
+   setColors( par );
+   newStatus = getId( par.id );
 
-      child = x.parentElement.children[ i ];
-      tag = "far";
-      old = "fa"
-      if ( val[ i ] ){
-         tag = "fa";
-         old = "far";
-      }
+   setAmnt( oldStatus , newStatus , par.id );
+   let numLikes = getAmnt( par.id );
+   console.log( bool_val , par.id , newStatus, numLikes );
 
-      child.classList.remove( old )
-      child.classList.add( tag );
+}
+
+function strip( x ){
+   for( let field in x ){
+      console.log( field , x[ field ] );
    }
-   
 }
