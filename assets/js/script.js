@@ -44,8 +44,8 @@ function setColors( par ){
    for( let i = 0 ; i < 2 ; i++ ){
 
       child = par.children[ i ];
-      tag = "far";
-      old = "fa";
+      tag = "far"; // Botão vazio
+      old = "fa";  // Botão preenchido
       if ( val[ i ] ){
          tag = "fa";
          old = "far";
@@ -109,6 +109,11 @@ function pushAmntToCard( par ){
 }
 
 function logClickEvent( likeButton , nomePasseio ){
+
+   // ------------------------------------------------------
+   // Mostra na tela o que aconteceu quando o usuario
+   // deu like ( ou dislike )
+   // ------------------------------------------------------
 
    let s1 = "O card escolhido foi " + nomePasseio;
    
