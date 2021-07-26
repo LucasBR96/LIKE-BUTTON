@@ -166,8 +166,14 @@ function setLike( num , x ){
 
 }
 
-function strip( x ){
-   for( let field in x ){
-      console.log( field , x[ field ] );
-   }
+function loadLikeDiv( nome ){
+
+   let s = `
+   <div class = "container", id ="${nome}">
+      <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
+      <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
+   </div>
+   `;
+
+   $( s ).appendTo( "#" + nome );
 }

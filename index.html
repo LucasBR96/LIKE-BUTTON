@@ -12,6 +12,9 @@
 
 <body>
 
+   <script src="assets/js/jquery-3.3.1.js"></script>
+   <script src="assets/js/script.js"></script>
+
    <!-- barra de navegação -->
    <nav class="navbar navbar-light bg-light navbar-expand-md fixed-top">
       <div class="container">
@@ -68,13 +71,14 @@
             <div class="card mb-3">
                <img src="assets/images/p-ciclovia.jpg" alt="Ciclovias">
                <div class="card-body">
-                  <div class="text-center">
-                     <h5 class="card-title">Ciclovias da Cidade</h5>
+                  <div class="text-center" id ="Ciclovia">
+                     <h5 class="card-title"  >Ciclovias da Cidade</h5>
 
-                     <div class = "container", id ="Ciclovia">
+                     <!-- <div class = "container", id ="Ciclovia">
                         <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
                         <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
-                     </div>
+                     </div> -->
+                     <script src="assets/js/script.js", onload="loadLikeDiv( 'Ciclovia' )"></script>
 
                      <p class="text-warning font-weight-bold">Passeio diário</p>
                   </div>
@@ -93,13 +97,14 @@
             <div class="card mb-3">
                <img src="assets/images/p-copacabana.jpg" alt="Copacabana">
                <div class="card-body">
-                  <div class="text-center">
-                     <h5 class="card-title">Praia de Copacabana</h5>
+                  <div class="text-center" id = "Copa">
+                     <h5 class="card-title" >Praia de Copacabana</h5>
 
-                     <div class = "container", id ="Copa">
+                    <!--  <div class = "container", id ="Copa">
                         <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
                         <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
-                     </div>
+                     </div> -->
+                     <script src="assets/js/script.js", onload="loadLikeDiv( 'Copa' )"></script>
 
                      <p class="text-warning font-weight-bold">Passeio terças e quintas</p>
                   </div>
@@ -132,13 +137,14 @@
             <div class="card mb-3">
                <img src="assets/images/p-cristo-redentor.jpg" alt="Cristo Redentor">
                <div class="card-body">
-                  <div class="text-center">
+                  <div class="text-center" id = "Cristo" >
                      <h5 class="card-title">Cristo Redentor</h5>
 
-                     <div class = "container", id ="Cristo">
+                     <!-- <div class = "container", id ="Cristo">
                         <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
                         <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
-                     </div>
+                     </div> -->
+                     <script src="assets/js/script.js", onload="loadLikeDiv( 'Cristo' )"></script>
 
                      <p class="text-warning font-weight-bold">Passeio terças e quintas</p>
                   </div>
@@ -157,13 +163,14 @@
             <div class="card mb-3">
                <img src="assets/images/p-arcos-da-lapa.jpg" alt="Lapa">
                <div class="card-body">
-                  <div class="text-center">
+                  <div class="text-center" id = "Lapa">
                      <h5 class="card-title">Arcos da Lapa</h5>
 
-                     <div class = "container", id ="Lapa">
+                     <!-- <div class = "container", id ="Lapa">
                         <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
                         <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
-                     </div>
+                     </div> -->
+                     <script src="assets/js/script.js", onload="loadLikeDiv( 'Lapa' )"></script>
 
                      <p class="text-warning font-weight-bold">Passeio terças e quintas</p>
                   </div>
@@ -253,10 +260,10 @@
          <li><a href='#'>Livrarias</a></li>
       </ul>
 
-   <script src="assets/js/jquery-3.3.1.js"></script>
+   
    <script src="assets/js/popper.js"></script>
    <script src="assets/js/bootstrap.js"></script>
-   <script src="assets/js/script.js"></script>
+   
 </body>
 
 </html>
