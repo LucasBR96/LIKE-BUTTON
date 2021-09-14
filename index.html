@@ -12,15 +12,13 @@
 
 <body>
 
-   <script src="assets/js/jquery-3.3.1.js"></script>
-   <script src="assets/js/script.js"></script>
-
+   
    <!-- barra de navegação -->
    <nav class="navbar navbar-light bg-light navbar-expand-md fixed-top">
       <div class="container">
          <a class="navbar-brand" href="#"><img src="assets/images/Rio-Turismo.png" style="width: 90px;"
-               alt="Rio Turismo"></a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            alt="Rio Turismo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
             aria-expanded="false" aria-label="Botão de navegação">
             <span class="navbar-toggler-icon"></span>
          </button>
@@ -42,7 +40,7 @@
                <a class="nav-item nav-link" href="#">Reservas</a>
                <a class="nav-item nav-link" href="#header">Contato</a>
             </div>
-
+            
             <div class="navbar-nav">
                <a class="nav-item nav-link" href="#pedidos">Meus Pedidos</a>
                <a class="nav-item nav-link" href="#janelamodal">
@@ -52,9 +50,9 @@
          </div>
       </div>
    </nav>
-
+   
    <div class="bgimage d-none d-md-block mb-4" style="margin-top: 69px;"></div>
-
+   
    <div class="container">
       <!-- jumbutron ( aparece quando a tela fica muito pequena ) -->
       <div class="jumbotron d-block d-md-none text-center mb-4" style="margin-top: 89px;">
@@ -62,10 +60,10 @@
          <br>
          <h5>Veja abaixo os passeios mais solicitados pelos nossos clientes.</h5>
       </div>
-
+      
       <h4 id="passeios" class="mb-3">Nossos Passeios</h4>
       <div class="row">
-
+         
          <!-- Eis aqui um modelo de card, os outros seguem uma estrutura similar -->
          <div class="col-lg-4 col-md-6">
             <div class="card mb-3">
@@ -73,54 +71,41 @@
                <div class="card-body">
                   <div class="text-center" id ="Ciclovia">
                      <h5 class="card-title"  >Ciclovias da Cidade</h5>
-
-                     <!-- <div class = "container", id ="Ciclovia">
-                        <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
-                        <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
-                     </div> -->
-                     <script src="assets/js/script.js", onload="loadLikeDiv( 'Ciclovia' )"></script>
-
                      <p class="text-warning font-weight-bold">Passeio diário</p>
                   </div>
                   <p class="card-text text-justify">
                      O Rio possui uma extensa malha de ciclovias. As principais vias começam
                      na Marina da Glória, próxima ao centro da Cidade, passando por toda a
                      Zona Sul até o Leblon.</p>
-               </div>
-               <div class="card-footer text-right">
-                  <button class="btn btn-outline-primary">Mais informações...</button>
+                  </div>
+                  <div class="card-footer text-right">
+                     <button class="btn btn-outline-primary">Mais informações...</button>
+                  </div>
                </div>
             </div>
-         </div>
-
-         <div class="col-lg-4 col-md-6">
-            <div class="card mb-3">
-               <img src="assets/images/p-copacabana.jpg" alt="Copacabana">
-               <div class="card-body">
-                  <div class="text-center" id = "Copa">
-                     <h5 class="card-title" >Praia de Copacabana</h5>
-
-                    <!--  <div class = "container", id ="Copa">
-                        <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
-                        <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
-                     </div> -->
-                     <script src="assets/js/script.js", onload="loadLikeDiv( 'Copa' )"></script>
-
-                     <p class="text-warning font-weight-bold">Passeio terças e quintas</p>
-                  </div>
-                  <p class="card-text text-justify">
-                     Copacabana que é também conhecida como 
-                     <a href="#"
+            
+            <div class="col-lg-4 col-md-6">
+               <div class="card mb-3">
+                  <img src="assets/images/p-copacabana.jpg" alt="Copacabana">
+                  <div class="card-body">
+                     <div class="text-center" id = "Copa">
+                        <h5 class="card-title" >Praia de Copacabana</h5>
+                        
+                        <p class="text-warning font-weight-bold">Passeio terças e quintas</p>
+                     </div>
+                     <p class="card-text text-justify">
+                        Copacabana que é também conhecida como 
+                        <a href="#"
                         onclick="return false;"
                         data-trigger="hover"
                         data-toggle="tooltip" 
                         data-placement="top"
                         data-html="true"
                         title="<b>Tom Jobim:</b><br>
-                               Copacabana, princesinha do mar<br>
-                               Pelas manhãs tu és a vida a cantar<br>
-                               E a tardinha o sol poente<br>
-                               Deixa sempre uma saudade na gente">
+                        Copacabana, princesinha do mar<br>
+                        Pelas manhãs tu és a vida a cantar<br>
+                        E a tardinha o sol poente<br>
+                        Deixa sempre uma saudade na gente">
                         "Princesinha do Mar"
                      </a>   
                      em função de uma famosa canção em sua homenagem, é um dos 
@@ -132,138 +117,201 @@
                </div>
             </div>
          </div>
-
+         
          <div class="col-lg-4 col-md-6">
             <div class="card mb-3">
                <img src="assets/images/p-cristo-redentor.jpg" alt="Cristo Redentor">
                <div class="card-body">
                   <div class="text-center" id = "Cristo" >
                      <h5 class="card-title">Cristo Redentor</h5>
-
+                     
                      <!-- <div class = "container", id ="Cristo">
                         <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
                         <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
                      </div> -->
-                     <script src="assets/js/script.js", onload="loadLikeDiv( 'Cristo' )"></script>
-
+                     
                      <p class="text-warning font-weight-bold">Passeio terças e quintas</p>
                   </div>
                   <p class="card-text text-justify">
                      Entre os principais pontos turísticos da cidade, estão o Corcovado, com a
                      estátuado Cristo Redentor e o Pão de açucar. Ambos fornecem uma vista
                      magnifíca da cidade.</p>
-               </div>
-               <div class="card-footer text-right">
-                  <button class="btn btn-outline-primary">Mais informações...</button>
-               </div>
-            </div>
-         </div>
-
-         <div class="col-lg-4 col-md-6">
-            <div class="card mb-3">
-               <img src="assets/images/p-arcos-da-lapa.jpg" alt="Lapa">
-               <div class="card-body">
-                  <div class="text-center" id = "Lapa">
-                     <h5 class="card-title">Arcos da Lapa</h5>
-
-                     <!-- <div class = "container", id ="Lapa">
-                        <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
-                        <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
-                     </div> -->
-                     <script src="assets/js/script.js", onload="loadLikeDiv( 'Lapa' )"></script>
-
-                     <p class="text-warning font-weight-bold">Passeio terças e quintas</p>
                   </div>
-                  <p class="card-text text-justify">
-                     A Lapa é dos locais noturnos mais conhecidos do Rio. É super democrático, rico
-                     em diversidade e abriga todas as tribos. Lá podemos encontrar bons restaurantes
-                     e bares, alguns com música ao vivo e muita concentração de jovens.</p>
-               </div>
-               <div class="card-footer text-right">
-                  <button class="btn btn-outline-primary">Mais informações...</button>
+                  <div class="card-footer text-right">
+                     <button class="btn btn-outline-primary">Mais informações...</button>
+                  </div>
                </div>
             </div>
-         </div>
-
-         <div class="col-lg-4 col-md-6">
-            <div class="card mb-3">
-               <img src="assets/images/p-maracana.jpg" alt="Maracanã">
-               <div class="card-body">
-                  <div class="text-center">
-                     <h5 class="card-title">Maracanã</h5>
-
-                     <div class = "container", id ="Mara">
-                        <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
-                        <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
+            
+            <div class="col-lg-4 col-md-6">
+               <div class="card mb-3">
+                  <img src="assets/images/p-arcos-da-lapa.jpg" alt="Lapa">
+                  <div class="card-body">
+                     <div class="text-center" id = "Lapa">
+                        <h5 class="card-title">Arcos da Lapa</h5>
+                        <p class="text-warning font-weight-bold">Passeio terças e quintas</p>
                      </div>
-
-                     <p class="text-warning font-weight-bold">Passeio semanal</p>
-                  </div>
-                  <p class="card-text text-justify">
-                     Construído para abrigar a Copa do Mundo de 1950, vencida pelo Uruguai, o Maracanã
-                     já foi o maior estádio de futebol do mundo, mas perdeu este status em reforma
-                     recente. Visitá-lo, especialmente em dias de jogos, pode ser algo inesquecível.</p>
-               </div>
-               <div class="card-footer text-right">
-                  <button class="btn btn-outline-primary">Mais informações...</button>
-               </div>
-            </div>
-         </div>
-
-         <div class="col-lg-4 col-md-6">
-            <div class="card mb-3">
-               <img src="assets/images/p-pao-de-acucar.jpg" alt="Pão de Açucar">
-               <div class="card-body">
-                  <div class="text-center">
-                     <h5 class="card-title">Pão de Açucar</h5>
-
-                     <div class = "container", id ="Pao">
-                        <i onclick = "setLike( 1 , this  )" class = "far fa-thumbs-up mx-2">2</i>
-                        <i onclick = "setLike( 0 , this  )" class = "far fa-thumbs-down mx-2">2</i>
+                     <p class="card-text text-justify">
+                        A Lapa é dos locais noturnos mais conhecidos do Rio. É super democrático, rico
+                        em diversidade e abriga todas as tribos. Lá podemos encontrar bons restaurantes
+                        e bares, alguns com música ao vivo e muita concentração de jovens.</p>
                      </div>
-
-                     <p class="text-warning font-weight-bold">Passeio semanal</p>
+                     <div class="card-footer text-right">
+                        <button class="btn btn-outline-primary">Mais informações...</button>
+                     </div>
                   </div>
-                  <p class="card-text text-justify">
-                     Localizado no bairro da Urca, o bondinho é uma das principais 
-                     atrações turísticas da cidade. Liga a Praia Vermelha ao morro 
-                     da Urca e ao morro do Pão de açúcar. O bondinho foi cenário 
-                     do filme 
-                     <a href="#"
-                        onclick="return false;"
-                        data-trigger="hover"
-                        data-toggle="popover"
-                        data-title="007 Contra o Foguete da Morte"
-                        data-placement="top"
-                        data-html="true"
-                        data-content="Filme franco-britânico de ação, aventura
-                                      espionagem e ficção científica de 1979, o
-                                      décimo primeiro da série James Bond com 
-                                      <b>Roger Moore</b> no papel do agente 
-                                      secreto.">
-                        007 Contra o Foguete da Morte
-                     </a>, de 1979.
-                  </p>
                </div>
-               <div class="card-footer text-right">
-                  <button class="btn btn-outline-primary">Mais informações...</button>
+               
+               <div class="col-lg-4 col-md-6">
+                  <div class="card mb-3">
+                     <img src="assets/images/p-maracana.jpg" alt="Maracanã">
+                     <div class="card-body">
+                        <div class="text-center">
+                           <h5 class="card-title">Maracanã</h5>
+                           <p class="text-warning font-weight-bold">Passeio semanal</p>
+                        </div>
+                        <p class="card-text text-justify">
+                           Construído para abrigar a Copa do Mundo de 1950, vencida pelo Uruguai, o Maracanã
+                           já foi o maior estádio de futebol do mundo, mas perdeu este status em reforma
+                           recente. Visitá-lo, especialmente em dias de jogos, pode ser algo inesquecível.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                           <button class="btn btn-outline-primary">Mais informações...</button>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="col-lg-4 col-md-6">
+                     <div class="card mb-3">
+                        <img src="assets/images/p-pao-de-acucar.jpg" alt="Pão de Açucar">
+                        <div class="card-body">
+                           <div class="text-center">
+                              <h5 class="card-title">Pão de Açucar</h5>
+                              
+                              <p class="text-warning font-weight-bold">Passeio semanal</p>
+                           </div>
+                           <p class="card-text text-justify">
+                              Localizado no bairro da Urca, o bondinho é uma das principais 
+                              atrações turísticas da cidade. Liga a Praia Vermelha ao morro 
+                              da Urca e ao morro do Pão de açúcar. O bondinho foi cenário 
+                              do filme 
+                              <a href="#"
+                              onclick="return false;"
+                              data-trigger="hover"
+                              data-toggle="popover"
+                              data-title="007 Contra o Foguete da Morte"
+                              data-placement="top"
+                              data-html="true"
+                              data-content="Filme franco-britânico de ação, aventura
+                              espionagem e ficção científica de 1979, o
+                              décimo primeiro da série James Bond com 
+                              <b>Roger Moore</b> no papel do agente 
+                              secreto.">
+                              007 Contra o Foguete da Morte
+                           </a>, de 1979.
+                        </p>
+                     </div>
+                     <div class="card-footer text-right">
+                        <button class="btn btn-outline-primary">Mais informações...</button>
+                     </div>
+                  </div>
                </div>
-            </div>
-         </div>
-      </div> <!-- fecha o div aberto na linha 64 -->
+            </div> <!-- fecha o div aberto na linha 64 -->
+            
+            <h5>Passeios Culturais</h5>
+            <ul>
+               <li><a href='#'>Museus</a></li>
+               <li><a href='#'>Feiras</a></li>
+               <li><a href='#'>Bibliotecas</a></li>
+               <li><a href='#'>Livrarias</a></li>
+            </ul>
+            
+            
+            <script src="assets/js/jquery-3.3.1.js"></script>
+            <script src="assets/js/popper.js"></script>
+            <script src="assets/js/bootstrap.js"></script>
 
-      <h5>Passeios Culturais</h5>
-      <ul>
-         <li><a href='#'>Museus</a></li>
-         <li><a href='#'>Feiras</a></li>
-         <li><a href='#'>Bibliotecas</a></li>
-         <li><a href='#'>Livrarias</a></li>
-      </ul>
+            <script>
+               $( document ).ready( function(){
 
-   
-   <script src="assets/js/popper.js"></script>
-   <script src="assets/js/bootstrap.js"></script>
-   
+                  $( ".card-body > .text-center").each( function(){
+
+                     $( this ).append( 
+                     `<div class = "container clikes" >
+                        <i class = "far fa-thumbs-up mx-2">2</i>
+                        <i class = "far fa-thumbs-down mx-2">2</i>
+                     </div>`);
+
+                     let m = $( this ).find( "div.container.clikes" );
+                     let n = $( this ).find( "h5" );
+                     $( m ).insertAfter( n );
+                  })
+
+                  $( "i.fa-thumbs-up" ).click( function(){
+
+                     // x indica que o botão de like foi clicado
+                     let x = true;
+
+                     // botao de like ja estava selecionado antes
+                     let y = $( this ).hasClass( "fa" );
+
+                     // botao de dislike ja estava selecionado antes
+                     let z = $( this ).next().hasClass( "fa" );
+
+                     let par = $( this ).parent();
+                     updateLikeDisplay( par , x , y , z );
+                  })
+
+                  $( "i.fa-thumbs-down" ).click( function(){
+
+                     // x , y , z siginificam as mesmas coisas que pro botão de like
+                     // so que as posiçẽos e valores são diferentes
+                     let x = false;
+                     let y = $( this ).prev().hasClass( "fa" );
+                     let z = $( this ).hasClass( "fa" );
+
+                     let par = $( this ).parent();
+                     updateLikeDisplay( par , x , y , z );
+                  })
+
+               })
+
+               updateLikeDisplay = function( par , x , y , z ){
+
+                  let y_prime = ( x && ( !y )); 
+                  let like_field = $( par ).find( "i.fa-thumbs-up");
+                  updateLikeButton( like_field , y , y_prime );
+
+                  let z_prime = ( !x && ( !z ));
+                  let dislike_field = $( par ).find( "i.fa-thumbs-down");
+                  updateLikeButton( dislike_field , z , z_prime );
+
+               }
+
+               updateLikeButton = function( field , old , novo ){
+
+                  // mudando a cor do botão
+                  if( novo ){
+                     $( field ).addClass( "fa" );
+                     $( field ).removeClass( "far" );
+                  }else{
+                     $( field ).addClass( "far" );
+                     $( field ).removeClass( "fa" );
+                  }
+
+                  // mudando a contagem
+                  let m = parseInt( $( field ).text() ); 
+                  if( old != novo ){
+                     if( novo )
+                        m = m + 1;
+                     else
+                        m = m - 1;
+
+                     $( field ).text( m );
+                  }
+               }
+            </script>
+            
 </body>
 
 </html>
